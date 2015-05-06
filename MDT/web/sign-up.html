@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sign-up</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        <script src="js/jquery.min.js"></script>        
+        <script src="js/jquery.validate.min.js"></script> 
+        <script src="js/jquery.validate.tooltip.js"></script> 
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <header id="header">
+						<h1><a href="/MDT">CAREER IN</a></h1>
+						<nav id="nav">
+							<ul>
+                                                                <li id="username-login" class="special">                                                                    
+                                                                </li>
+								<li class="special">
+									<a class="menuToggle" style="cursor: pointer;"><span>Menu</span></a>
+									
+								</li>
+							</ul>
+						</nav>
+					</header>
+            <article id="main">
+                <header>
+							<h2>Join the world's largest professional network</h2>
+							<p>Get started – it’s free.</p>
+						</header>
+               
+        <section class="wrapper alt style2" id="two">
+						<section class="spotlight">
+							<div class="content" style="max-width: 55em;width: 60%">								
+								<p>Registration takes less than 2 minutes.</p>
+                                                                <form action="#" method="post" id="theform">
+                                                                    <div class="6u 12u(xsmall)" style="padding: 0 0 0 1.5em;">
+                                                                        <input type="text" placeholder="Name" value="" id="demo-name" name="demoname" data-errorposition="r">
+                                                                        
+                                                                    </div>
+                                                                   <div class="6u 12u(xsmall)" style="padding: 1.5em 0 0 1.5em;">
+                                                                        <input type="email" placeholder="Email" value="" id="demo-email" name="demoemail" data-errorposition="r">
+                                                                    </div>
+                                                                    <div class="6u 12u(xsmall)" style="padding: 1.5em 0 0 1.5em;">
+                                                                        <input type="password" placeholder="Password" value="" id="demo-password" name="demopassword" data-errorposition="r">
+                                                                    </div>
+                                                                    
+                                                                    <div class="6u 12u(xsmall)" style="padding: 1.5em 0 0 1.5em;">
+                                                                        <input type="password" placeholder="Retype-Passowrd" value="" id="demo-retype-password" name="demoretypepassword" data-errorposition="r">
+                                                                    </div>
+
+                                                                    <div class="12u"  style="padding: 1.5em 0 0 1.5em;">
+                                                                        <ul class="actions">
+                                                                            <li><input type="submit" class="special" id="signup" value="Submit"></li>
+                                                                            <li><input type="reset" value="Reset" id="resetsignup"></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </form>
+                                                        </div>
+						</section>						
+					</section>
+            </article>
+        </div>
+        
+        <!-- Scripts -->
+			
+			<script src="js/jquery.scrollex.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/skel.min.js"></script>
+                        <script src="js/Cookie.js"></script>
+			<script src="js/init.js"></script>
+                        
+	
+                        <div id="menu">
+										<ul>
+											<li><a href="/MDT">Home</a></li>
+											<li><a href="contact-us.html">Contact us</a></li>											
+											<li id="signupli"><a style="cursor: pointer;" href="sign-up.html">Sign Up</a></li>
+											<li id="loginli"><a href="#openModal" style="cursor: pointer;">Log In</a></li>
+                                                                                        <li id="logoutli" style="display: none;"><a id="logout-link" style="cursor: pointer;">Log Out</a></li>
+										</ul>
+									<a href="login.html" class="close"></a></div>
+                                                                        <div id="openModal" class="modalDialog">
+	<div id="innerModal">
+		<a href="#close" title="Close" class="closeModal">X</a>
+		<section id="bannerModal">
+						<div class="inner">
+							<h2 style="color: #666;margin-left: 7%;">Career In</h2>
+                                                </div>
+                </section>
+		<form action="#" method="post" id="theloginform">
+                                                                    <div class="6u 12u(xsmall)" style="padding: 0 0 0 1.5em;width: 90%">
+                                                                        <input type="text" placeholder="Username" value="" id="demo-username" name="demousername" data-errorposition="r">
+                                                                        
+                                                                    </div>
+                                                                   <div class="6u 12u(xsmall)" style="padding: 1.5em 0 0 1.5em;width: 90%;">
+                                                                        <input type="password" placeholder="Password" value="" id="demo-login-password" name="demologinpassword" data-errorposition="r">
+                                                                    </div>
+                                            <div class="12u"  style="padding: 1.5em 0 0 1.5em;">
+                                                                        <ul class="actions" style="width: 100%">
+                                                                            <li style="width: 100%"><input type="submit" class="special" id="login" value="Login" style="width: 97%"></li>
+                                                                            <div style="width: 90%; text-align: center; margin: 10px 0px; font-size: 13px; color: rgb(102, 102, 102);">
+                                                                                Not a member? <a href="sign-up.html">Join now</a></div>
+                                                                        </ul>
+                                                                    </div>
+                                        </form>
+	</div>
+</div>
+              <script>
+                            var cookie = getCookie("mdt");
+                            if(cookie !== "" ){                                
+                                document.getElementById("loginli").style.display="none";
+                                document.getElementById("signupli").style.display="none";
+                                document.getElementById("logoutli").style.display="block";
+                                document.getElementById("username-login").innerHTML="<span style=\"font-size: 0.8em;\">"+cookie.toUpperCase(); +"</span>"
+                                document.getElementById("username-login").style.display="inline";
+                            }else{
+                                document.getElementById("loginli").style.display="block";
+                                document.getElementById("signupli").style.display="block";
+                                document.getElementById("logoutli").style.display="none";
+                                document.getElementById("username-login").style.display="none";
+                            }
+                        </script>         
+    </body>
+</html>

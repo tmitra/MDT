@@ -1,0 +1,15 @@
+{"user_id": "100","name": "You are here",
+ "children": [ { "user_id": "501","name": "Business Administration", "children":[{ "user_id": "529","name": "Business Administration", "children":[{ "user_id": "31","name": "Technology Consultant", "children":[{ "user_id": "17","name": "Product Manager"
+ }]
+ }]
+ }]
+ }, { "user_id": "513","name": "Information Systems", "children":[{ "user_id": "23","name": "Software Developer", "children":[{ "user_id": "22","name": "Senior Software Developer", "children":[{ "user_id": "529","name": "Business Administration", "children":[{ "user_id": "17","name": "Product Manager"
+ }]
+ }]
+ }]
+ }]
+ }, { "user_id": "527","name": "Finance and Operations", "children":[{ "user_id": "33","name": "Business Analyst", "children":[{ "user_id": "504","name": "Computer Science", "children":[{ "user_id": "17","name": "Product Manager"
+ }]
+ }]
+ }]
+ } ]}

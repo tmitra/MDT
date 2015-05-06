@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/contact.css" />
+        <script src="js/jquery.min.js"></script>  
+        
+        <script src="js/jquery.validate.min.js"></script> 
+        <script src="js/jquery.validate.tooltip.js"></script> 
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <header id="header">
+						<h1><a href="/MDT">CAREER IN</a></h1>
+						<nav id="nav">
+							<ul>
+                                                                <li id="username-login" class="special">                                                                    
+                                                                </li>
+								<li class="special">
+									<a class="menuToggle" style="cursor: pointer;"><span>Menu</span></a>
+									
+								</li>
+							</ul>
+						</nav>
+					</header>
+       <div id="skel-layers-wrapper" style="position: absolute; left: 0px; right: 0px; top: 0px; transition: top 0.5s ease 0s, right 0.5s ease 0s, bottom 0.5s ease 0s, left 0.5s ease 0s, opacity 0.5s ease 0s;">
+           <!-- Header --><!-- Main -->
+           <section class="container 75%" id="main">
+                <div class="box">
+                   <form action="#" method="post" id="sendmailform">
+                       <div class="row uniform 50%">
+                           <div class="6u 12u(mobilep)">
+                               <input type="text" placeholder="Name" value="" id="send-mail-name" name="send-mail-name">
+                           </div>
+                           <div class="6u 12u(mobilep)">
+                               <input type="email" placeholder="Email" value="" id="semd-mail-email" name="semd-mail-email">
+                           </div>
+                       </div>
+                       <div class="row uniform 50%">
+                           <div class="12u">
+                               <input type="text" placeholder="Subject" value="" id="subject" name="subject">
+                           </div>
+                       </div>
+                       
+                       <div class="row uniform 50%">
+                           <div class="12u">
+                               <textarea rows="6" placeholder="Enter your message" id="message" name="message"></textarea>
+                            </div>
+                       </div>
+                       <div class="row uniform"><div class="12u"><ul class="actions align-center"><li><input type="submit" value="Send Message" id="sendmailsubmit"></li></ul></div></div>
+                   </form>
+               </div>
+           </section>
+           
+       </div>
+        </div>
+        
+			<script src="js/sendmail.js"></script>  
+			<script src="js/jquery.scrollex.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/skel.min.js"></script>
+                        <script src="js/Cookie.js"></script>
+			<script src="js/init.js"></script>
+
+	
+                        <div id="menu">
+										<ul>
+											<li><a href="/MDT">Home</a></li>
+											<li><a href="contact-us.html">Contact us</a></li>
+											<li><a href="javascript:px.iframeLocation('iframe', 'elements.html');">Elements</a></li>
+											<li id="signupli"><a style="cursor: pointer;" href="sign-up.html">Sign Up</a></li>
+											<li id="loginli"><a href="#openModal" style="cursor: pointer;">Log In</a></li>
+                                                                                        <li id="logoutli" style="display: none;"><a id="logout-link" style="cursor: pointer;">Log Out</a></li>
+										</ul>
+									<a class="close"></a></div>
+                                                                        <div id="openModal" class="modalDialog">
+	<div id="innerModal">
+		<a href="#close" title="Close" class="closeModal">X</a>
+		<section id="bannerModal">
+						<div class="inner">
+							<h2 style="color: #000;margin-left: 7%;">Career In</h2>
+                                                </div>
+                </section>
+		<form action="#" method="post" id="theloginform">
+                                                                    <div class="6u 12u(xsmall)" style="padding: 0 0 0 1.5em;width: 90%">
+                                                                        <input type="text" placeholder="Username" value="" id="demo-username" name="demousername" data-errorposition="r">
+                                                                        
+                                                                    </div>
+                                                                   <div class="6u 12u(xsmall)" style="padding: 1.5em 0 0 1.5em;width: 90%;">
+                                                                        <input type="password" placeholder="Password" value="" id="demo-login-password" name="demologinpassword" data-errorposition="r">
+                                                                    </div>
+                                            <div class="12u"  style="padding: 1.5em 0 0 1.5em;">
+                                                                        <ul class="actions" style="width: 100%">
+                                                                            <li style="width: 100%"><input type="submit" class="special" id="login" value="Login" style="width: 97%"></li>
+                                                                            <div style="width: 90%; text-align: center; margin: 10px 0px; font-size: 13px; color: rgb(102, 102, 102);">
+                                                                                Not a member? <a href="sign-up.html">Join now</a></div>
+                                                                        </ul>
+                                                                    </div>
+                                        </form>
+	</div>
+</div>
+                        <script>
+                            var cookie = getCookie("mdt");
+                            if(cookie !== "" ){                                
+                                document.getElementById("loginli").style.display="none";
+                                document.getElementById("signupli").style.display="none";
+                                document.getElementById("logoutli").style.display="block";
+                                document.getElementById("username-login").innerHTML="<span style=\"font-size: 0.8em;\">"+cookie.toUpperCase(); +"</span>"
+                                document.getElementById("username-login").style.display="inline";
+                            }else{
+                                document.getElementById("loginli").style.display="block";
+                                document.getElementById("signupli").style.display="block";
+                                document.getElementById("logoutli").style.display="none";
+                                document.getElementById("username-login").style.display="none";
+                            }
+                        </script>
+    </body>
+</html>
